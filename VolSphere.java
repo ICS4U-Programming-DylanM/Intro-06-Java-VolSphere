@@ -1,3 +1,6 @@
+//import Scanner for user input
+import java.util.Scanner;
+
 /**
 * This program calculates the volume of a sphere.
 *
@@ -5,8 +8,6 @@
 * @version 1.0
 * @since 2025-September-11
 */
-// import Scanner for user input 
-import java.util.Scanner;
 
 final class VolSphere {
     /**
@@ -25,14 +26,15 @@ final class VolSphere {
         System.out.print("What is your radius: ");
         final Scanner radius = new Scanner(System.in);
         final double radiusDouble = radius.nextDouble();
-        
-        // If the radius is = or less than 0 it prints error and tells user to try again
+        //If the radius is = or less than 0 it prints error
         if (radiusDouble <= 0) {
             System.out.println("Invalid input, try again.");
             // Else prints volume of sphere
         } else {
-            final double volume = (4.0 / 3.0) * (Math.PI * Math.pow(radiusDouble, 3));
-            System.out.println("The volume of your sphere = " + String.format("%.3f", volume));
+            final double volume = (4.0 / 3.0)
+                * (Math.PI * Math.pow(radiusDouble, 3));
+            System.out.println("The volume of your sphere = "
+                + String.format("%.3f", volume));
         }
     }
 }
